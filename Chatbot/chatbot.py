@@ -50,4 +50,20 @@ def predict_class(sentence, model):                      # filter out prediction
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
     return return_list
 
+#%%
+def getResponse(ints, intents_json):     #to get a random response from the list of intents
+    tag = ints[0]['intent']
+    list_of_intents = intents_json['intents']
+    for i in list_of_intents:
+        if(i['tag']== tag):
+            result = random.choice(i['responses'])
+            break
+    return result
 
+def chatbot_response(text):
+    ints = predict_class(text, model)
+    res = getResponse(ints, intents)
+    return res
+
+#%%
+#developing the gui
