@@ -1,5 +1,5 @@
-# NLP_Resources
-### Scripts and short projects related to Natural Language processing  
+# NLP_Projects
+### Scripts and projects related to Natural Language processing  
 
 **1. Consumer complaint classification**  
 - Data downloaded form the US consumer complaints database with over 2.3 Million data points. Used NLTK, Keras and sklearn to perform classification of the customer narratives
